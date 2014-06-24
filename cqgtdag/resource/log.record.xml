@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<logs>
+	<!-- 日志记录对应关系 
+	<log class="com.ystech.aqtp.model.BreaderBreed" txt="验证码管理">
+		<actionFeild property="dbid" value="验证码ID"></actionFeild>
+	</log>-->
+	<!-- 日志记录对应关系 -->
+	<log class="com.ystech.aqtp.model.User" txt="用户管理">
+		<actionFeild property="dbid" value="用户ID"></actionFeild>
+	</log>
+	<log class="com.ystech.aqtp.model.Role" txt="角色管理">
+		<actionFeild property="dbid" value="角色管理ID"></actionFeild>
+	</log>
+	<log class="com.ystech.aqtp.model.Department" txt="部门管理">
+		<actionFeild property="dbid" value="部门ID"></actionFeild>
+	</log>
+	<log class="com.ystech.aqtp.model.DeskNumber" txt="桌号管理">
+		<actionFeild property="dbid" value="桌号ID"></actionFeild>
+	</log>
+	<log class="com.ystech.aqtp.model.Dish" txt="菜品管理">
+		<actionFeild property="dbid" value="菜品ID"></actionFeild>
+	</log>
+	<log class="com.ystech.aqtp.model.Cashier" txt="收银管理">
+		<actionFeild property="dbid" value="收银ID"></actionFeild>
+	</log>
+	<log class="com.ystech.aqtp.model.DishBusinessData" txt="点菜管理">
+		<actionFeild property="dbid" value="点菜菜品ID"></actionFeild>
+	</log>
+	<log class="com.ystech.aqtp.model.DishPay" txt="桌台管理">
+		<actionFeild property="dbid" value="桌台ID"></actionFeild>
+	</log>
+</logs>

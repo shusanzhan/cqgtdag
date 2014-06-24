@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">    	
+<struts>
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<package name="news"  extends="struts-default">
+		<interceptors>
+			<interceptor name="configdebug" class="com.configdebug.interceptor.ConfigDebugInterceptor"/>
+			<interceptor-stack name="news-stack">
+				<interceptor-ref name="configdebug"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="news-stack" />
+		<global-results>
+			 <result name="login" type="redirect">/main/login</result>
+		     <result name="error">/strutsError.jsp</result>
+		     <result name="invalid.token">/token.jsp</result>
+		</global-results>
+		
+		<global-exception-mappings>
+		    <exception-mapping exception="java.lang.Exception" result="error"/>
+		</global-exception-mappings>
+		<action name="swfUpload" class="swfUploadAction">
+		  	 <result name="invalid.token">/pages/commons/token.jsp</result>
+		  	 <result name="selfUpload">pages/commons/selfFileupload.jsp</result>
+        </action>
+        <action name="friendLink" class="friendLinkAcion">
+        	<result name="edit">/pages/friendLink/edit.jsp</result>
+        	<result name="list">/pages/friendLink/list.jsp</result>
+        </action>
+        
+         <action name="newsType" class="newsTypeAction">
+			<result name="list">/pages/newsType/list.jsp</result>
+			<result name="edit">/pages/newsType/edit.jsp</result>
+			<result name="orderNum">/pages/newsType/orderNum.jsp</result>
+         </action>
+         <action name="slide" class="slideAction">
+			<result name="list">/pages/slide/list.jsp</result>
+			<result name="edit">/pages/slide/edit.jsp</result>
+         </action>
+          <action name="news" class="newsAction">
+			<result name="list">/pages/news/list.jsp</result>
+			<result name="edit">/pages/news/edit.jsp</result>
+			<result name="add">/pages/news/add.jsp</result>
+         </action>
+    </package>
+</struts>

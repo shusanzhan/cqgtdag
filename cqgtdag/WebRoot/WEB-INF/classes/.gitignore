@@ -1,0 +1,15 @@
+/com
+/configdebug.properties
+/db.properties
+/ehcache_hibernate.xml
+/image.properties
+/log.record.xml
+/log4j.properties
+/print.properties
+/runtime
+/spring
+/spring-config.xml
+/spring-security.xml
+/struts
+/struts.properties
+/struts.xml

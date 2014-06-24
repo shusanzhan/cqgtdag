@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+    
+  <description>自定义标签</description>
+  <display-name>JSTL core</display-name>
+  <tlib-version>1.1</tlib-version>
+  <short-name>ystech</short-name>
+  <uri>http://www.ystech.co/tag</uri>
+  
+   <tag>
+       <!-- 名称为 <modo:urlEncrypt enCode='' /> -->
+       <name>subDate</name>
+       <tag-class>com.ystech.core.util.tag.SubDate</tag-class>
+       <body-content>empty</body-content> <!-- 就是<test:add ></test>中间的内容是空的 -->
+       <attribute>
+           <name>startTime</name>
+           <required>true</required>
+           <rtexprvalue>true</rtexprvalue>
+       </attribute>
+   </tag>
+   <tag>
+       <!-- 名称为 <modo:urlEncrypt enCode='' /> -->
+       <name>prodcutCategory</name>
+       <tag-class>com.ystech.core.util.tag.ProductCategoryTag</tag-class>
+       <body-content>empty</body-content> <!-- 就是<test:add ></test>中间的内容是空的 -->
+       <attribute>
+           <name>dbid</name>
+           <required>true</required>
+           <rtexprvalue>true</rtexprvalue>
+       </attribute>
+   </tag>
+</taglib>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-5-22 17:10:34 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.ystech.cqgtdag.model.news.Slide" table="slide" >
+        <id name="dbid" type="java.lang.Integer">
+            <column name="dbid" />
+            <generator class="identity" />
+        </id>
+        <property name="typeid" type="java.lang.Integer">
+            <column name="typeid" />
+        </property>
+        <property name="picUrl" type="string">
+            <column name="picUrl" length="120" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="32" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" length="120" />
+        </property>
+        <property name="display" type="java.lang.Boolean">
+            <column name="display" />
+        </property>
+        <property name="orderNum" type="java.lang.Short">
+            <column name="orderNum" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="createTime" length="19" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="modifyTime" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

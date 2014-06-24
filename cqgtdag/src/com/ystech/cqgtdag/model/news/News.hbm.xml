@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-5-22 17:10:34 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.ystech.cqgtdag.model.news.News" table="news" >
+        <id name="dbid" type="java.lang.Integer">
+            <column name="dbid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="newstype" class="com.ystech.cqgtdag.model.news.NewsType" fetch="select">
+            <column name="newsTypeDbid" />
+        </many-to-one>
+        <property name="title" type="string">
+            <column name="title" length="200" not-null="true" />
+        </property>
+        <property name="content" type="string">
+            <column name="content" length="65535" />
+        </property>
+        <property name="releaseDate" type="timestamp">
+            <column name="releaseDate" length="19" />
+        </property>
+        <property name="modifyDate" type="timestamp">
+            <column name="modifyDate" length="19" />
+        </property>
+        <property name="readNum" type="java.lang.Integer">
+            <column name="readNum" />
+        </property>
+        <property name="orderNum" type="java.lang.Integer">
+            <column name="orderNum" />
+        </property>
+        <property name="isStop" type="java.lang.Boolean">
+            <column name="isStop" />
+        </property>
+        <property name="titlePicture" type="string">
+            <column name="titlePicture" length="200" />
+        </property>
+        <property name="attach" type="string">
+            <column name="attach" length="2000" />
+        </property>
+        <property name="introduction" type="string">
+            <column name="introduction" length="2000" />
+        </property>
+        <property name="contentText" type="string">
+            <column name="contentText" length="2000" />
+        </property>
+        <many-to-one name="releasePerson" class="com.ystech.core.model.User" column="releasePerson" not-found="ignore"></many-to-one>
+    </class>
+</hibernate-mapping>
