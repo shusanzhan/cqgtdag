@@ -22,7 +22,7 @@ public class TomcatServer {
 	 */
 	protected String getTomcatPath() {
 		return System.getProperty("user.dir") + "/embbedserver";
-	}
+	}  
 
 	/**
 	 * 返回当前应用项目，用于发布到tomcat的应用存放路径(一般为项目名/webroot目录)
